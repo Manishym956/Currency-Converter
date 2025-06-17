@@ -1,121 +1,121 @@
 # 💱 Currency Converter
 
-A modern, responsive web application for real-time currency conversion with beautiful UI/UX, dark/light mode support, and historical data tracking.
+A modern React-based currency converter application with real-time exchange rates, theme switching, and historical data tracking.
 
 ## ✨ Features
 
-- **Real-time Exchange Rates**: Get up-to-date currency conversion rates
-- **20+ Currencies**: Support for major world currencies with flags
-- **Dark/Light Mode**: Toggle between themes with persistent preference
+- **Real-time Currency Conversion**: Convert between 20+ major world currencies
+- **Interactive UI**: Clean and intuitive user interface
+- **Theme Support**: Dark and light mode with system preference detection
 - **Historical Data**: View 7-day exchange rate history
-- **Recent Conversions**: Track your recent conversion history
-- **Responsive Design**: Works perfectly on desktop, tablet, and mobile
-- **Accessibility**: Full keyboard navigation and screen reader support
-- **Error Handling**: Graceful error handling with user-friendly messages
+- **Recent Conversions**: Track your last 5 currency conversions
+- **Error Handling**: User-friendly error messages and loading states
+- **Persistent Storage**: Saves theme preference and recent conversions
+- **Responsive Design**: Works on all device sizes
 
-## 🚀 Quick Start
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js (version 16 or higher)
+- Node.js (version 18 or higher)
 - npm or yarn
+- API key from [ExchangeRate-API](https://www.exchangerate-api.com/)
 
 ### Installation
 
-1. **Clone the repository**
+1. Clone the repository:
    ```bash
-   git clone <your-repo-url>
+   git clone <repository-url>
    cd currency-converter
    ```
 
-2. **Install dependencies**
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-3. **Set up environment variables**
-   ```bash
-   # Copy the example environment file
-   cp env.example .env
-   
-   # Edit .env and add your API key
+3. Create a `.env` file in the root directory:
+   ```env
    VITE_EXCHANGE_RATE_API_KEY=your_api_key_here
    ```
 
-4. **Get an API key**
-   - Visit [ExchangeRate-API](https://www.exchangerate-api.com/)
-   - Sign up for a free account
-   - Copy your API key
-   - Paste it in the `.env` file
-
-5. **Start the development server**
+4. Start the development server:
    ```bash
    npm run dev
    ```
 
-6. **Open your browser**
-   Navigate to `http://localhost:5173`
+## 🛠️ Built With
 
-## 🛠️ Available Scripts
+- [React](https://reactjs.org/) - UI Framework
+- [Vite](https://vitejs.dev/) - Build Tool
+- [ExchangeRate-API](https://www.exchangerate-api.com/) - Exchange Rate Data Provider
+
+## 📦 Project Structure
+
+```
+currency-converter/
+├── src/
+│   ├── services/
+│   │   └── api.js         # API integration
+│   ├── data/
+│   │   └── currencies.js  # Currency data
+│   ├── App.jsx           # Main application component
+│   ├── App.css          # Styles
+│   └── main.jsx         # Entry point
+├── .env                 # Environment variables
+└── package.json        # Dependencies and scripts
+```
+
+## 🎯 Features in Detail
+
+### Currency Conversion
+- Real-time conversion between 20+ currencies
+- Support for major world currencies with country flags
+- Swap functionality for quick currency exchange
+
+### Theme Support
+- Toggle between light and dark themes
+- Persistent theme preference
+- System theme detection
+
+### Historical Data
+- 7-day exchange rate history
+- Visual representation of rate changes
+- Easy-to-read historical data display
+
+### Recent Conversions
+- Track last 5 conversions
+- Persistent storage using localStorage
+- Quick access to recent conversion history
+
+## 📱 Responsive Design
+
+- Desktop optimized layout
+- Mobile-friendly interface
+- Tablet support with adaptive design
+
+## 🔧 Available Scripts
 
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
+- `npm run lint` - Lint code
 
-## 🎨 Features in Detail
+## 🤝 Contributing
 
-### Currency Conversion
-- Input any amount to convert between currencies
-- Real-time conversion as you type
-- Swap button to quickly reverse currencies
-- Formatted currency display with proper symbols
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-### Historical Data
-- View 7-day exchange rate trends
-- Click "View 7-Day History" to see historical data
-- Data is fetched from the ExchangeRate API
+## 📄 License
 
-### Recent Conversions
-- Automatically saves your last 5 conversions
-- Persistent storage using localStorage
-- Quick reference for repeated conversions
+This project is licensed under the MIT License.
 
-### Theme Support
-- Toggle between light and dark themes
-- Theme preference is saved in localStorage
-- Smooth transitions between themes
+---
 
-## 🔧 API Configuration
-
-This app uses the [ExchangeRate-API](https://www.exchangerate-api.com/) for real-time currency data.
-
-**Free Tier Limits:**
-- 1,500 requests per month
-- Real-time rates
-- Historical data (7 days)
-
-**API Endpoints Used:**
-- `GET /v6/{api_key}/latest/{base_currency}` - Get latest rates
-- `GET /v6/{api_key}/history/{base_currency}/{start_date}/{end_date}` - Get historical rates
-
-## 📱 Responsive Design
-
-The app is fully responsive and optimized for:
-- **Desktop**: Full-featured layout with side-by-side currency selectors
-- **Tablet**: Adjusted layout with stacked elements
-- **Mobile**: Single-column layout with touch-friendly controls
-
-## 🎯 Performance
-
-- **Load Time**: < 2 seconds
-- **Conversion Latency**: < 500ms
-- **Mobile Compatibility**: 95%+
-- **Error Rate**: < 1%
-
-## 🔒 Security
-
-- API keys are stored in environment variables
+Created with ❤️ using React and Vite
 - `.env` files are excluded from version control
 - No sensitive data is stored in the browser
 - HTTPS recommended for production
